@@ -1,0 +1,50 @@
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\bin\Debug\ClientApp.exe.config
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\bin\Debug\ClientApp.exe
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\bin\Debug\ClientApp.pdb
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.Form1.resources
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.exe
+F:\Szkoła\Algorytmy\C#\ClientApp\ClientApp\obj\Debug\ClientApp.pdb
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\bin\Debug\ClientApp.exe.config
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\bin\Debug\ClientApp.exe
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\bin\Debug\ClientApp.pdb
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.Form1.resources
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.exe
+C:\Users\Lenovo\Desktop\ApplicationsThatConnectByPort\ClientApp\ClientApp\obj\Debug\ClientApp.pdb
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\bin\Debug\ClientApp.exe.config
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\bin\Debug\ClientApp.exe
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\bin\Debug\ClientApp.pdb
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.Form1.resources
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.exe
+D:\Piotr\Szkoła\2P\Szkoła\Algorytmy\C#\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.pdb
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\bin\Debug\ClientApp.exe.config
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\bin\Debug\ClientApp.exe
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\bin\Debug\ClientApp.pdb
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.Form1.resources
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.exe
+E:\Antek\Szkolne rzeczy\algorytmy\klasa 2\Server-Client\ClientApp\ClientApp\obj\Debug\ClientApp.pdb
+E:\C#\Server-Client messages\ClientApp\ClientApp\bin\Debug\ClientApp.exe.config
+E:\C#\Server-Client messages\ClientApp\ClientApp\bin\Debug\ClientApp.exe
+E:\C#\Server-Client messages\ClientApp\ClientApp\bin\Debug\ClientApp.pdb
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.Form1.resources
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.exe
+E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.pdb

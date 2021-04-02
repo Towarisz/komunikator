@@ -1,0 +1,7 @@
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\bin\Debug\ServerConsoleApp.exe.config
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\bin\Debug\ServerConsoleApp.exe
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\bin\Debug\ServerConsoleApp.pdb
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.csprojAssemblyReference.cache
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.csproj.CoreCompileInputs.cache
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.exe
+E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.pdb
