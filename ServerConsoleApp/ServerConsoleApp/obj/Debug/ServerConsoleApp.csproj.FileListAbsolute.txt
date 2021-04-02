@@ -5,3 +5,10 @@ E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerC
 E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.csproj.CoreCompileInputs.cache
 E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.exe
 E:\C#\Server-Client messages\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.pdb
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\bin\Debug\ServerConsoleApp.exe.config
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\bin\Debug\ServerConsoleApp.exe
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\bin\Debug\ServerConsoleApp.pdb
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.csprojAssemblyReference.cache
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.csproj.CoreCompileInputs.cache
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.exe
+E:\C#\komunikator-server-klient\ServerConsoleApp\ServerConsoleApp\obj\Debug\ServerConsoleApp.pdb

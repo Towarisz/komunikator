@@ -33,6 +33,7 @@ namespace ClientApp
                 reading = new BinaryReader(ns);
                 writing = new BinaryWriter(ns);
                 writing.Write(Nick.Text);
+                writing.Flush();
                 activeCall = true;
                 backgroundWorker2.RunWorkerAsync();
             }
@@ -47,6 +48,7 @@ namespace ClientApp
         { 
             string messageSent = MessageTextBox.Text;
             writing.Write(messageSent);
+            writing.Flush();
         }
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)

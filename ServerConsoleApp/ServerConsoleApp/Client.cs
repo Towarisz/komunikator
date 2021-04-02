@@ -34,19 +34,20 @@ namespace ServerConsoleApp
             reading = newStreamReader;
             writing = new BinaryWriter(client.GetStream());
 
-            message = new Thread(() =>
+            Thread message = new Thread(new ThreadStart(() =>
             {
                 while (true)
-                {
+                { 
                     try
                     {
                         Broadcast(reading.ReadString(), nazwa);
-                    }catch(Exception ex)
+                    }catch
                     {
-                        Console.WriteLine(ex.ToString());
+                        
                     }
                 }
-            });
+            }));
+            message.Start();
         }
 
             public static void Broadcast(String message, String sender)

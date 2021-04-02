@@ -48,3 +48,13 @@ E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.Gene
 E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
 E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.exe
 E:\C#\Server-Client messages\ClientApp\ClientApp\obj\Debug\ClientApp.pdb
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\bin\Debug\ClientApp.exe.config
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\bin\Debug\ClientApp.exe
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\bin\Debug\ClientApp.pdb
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.Form1.resources
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.exe
+E:\C#\komunikator-server-klient\ClientApp\ClientApp\obj\Debug\ClientApp.pdb

@@ -22,14 +22,13 @@ namespace ServerConsoleApp
                 TcpClient tpcClient = Client.server.AcceptTcpClient();
                 BinaryReader Reader = new BinaryReader(tpcClient.GetStream());
                 String nazwa = Reader.ReadString();
-                Console.WriteLine(nazwa);
                 while (Client.names.Contains(nazwa))
                 {
                     nazwa += " - sobowtór";
                 }
                 Client.names.Add(nazwa);
                 Client.users.Add(new Client(ref tpcClient, ref Reader, ref nazwa, DateTime.Now.ToString("h:mm:ss tt")));
-                Console.WriteLine(nazwa + "joined");
+                Console.WriteLine(nazwa + " joined");
             }
         });
 
