@@ -12,9 +12,9 @@ namespace ServerConsoleApp
 {
     class Client
     {
-        static string adres;
-        static int port;
-        public static TcpListener server = new TcpListener(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1001));
+        static string adres = "127.0.0.1";
+        static int port = 1001;
+        public static TcpListener server = new TcpListener(new IPEndPoint(IPAddress.Parse(adres), port));
         public static List<string> names = new List<string>();
         public static List<Client> users = new List<Client>();
 
@@ -24,6 +24,9 @@ namespace ServerConsoleApp
         public string connectionTime;
         public BinaryReader reading;
         public BinaryWriter writing;
+        public bool connected = true;
+        public string recivedMessge;
+        public string end = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
 
         public Client(ref TcpClient newConnection,ref BinaryReader newStreamReader, ref String newNick, string whenConnect)
@@ -33,17 +36,28 @@ namespace ServerConsoleApp
             connectionTime = whenConnect;
             reading = newStreamReader;
             writing = new BinaryWriter(client.GetStream());
+            
 
-            Thread message = new Thread(new ThreadStart(() =>
+            message = new Thread(new ThreadStart(() =>
             {
-                while (true)
+                while (connected)
                 { 
                     try
                     {
-                        Broadcast(reading.ReadString(), nazwa);
-                    }catch
+                        recivedMessge = reading.ReadString();
+                        if ( recivedMessge == end)
+                        {
+                            writing.Write(nazwa + "has disconnected" );
+                            Delete(this);
+                            connected = false;
+                        }
+                        else
+                        {
+                            Broadcast(recivedMessge, nazwa);
+                        }
+                    }catch(Exception ex)
                     {
-                        
+                        Console.WriteLine(ex.ToString());
                     }
                 }
             }));

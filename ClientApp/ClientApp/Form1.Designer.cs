@@ -37,7 +37,6 @@ namespace ClientApp
             this.ConnectButton = new System.Windows.Forms.Button();
             this.MessageTextBox = new System.Windows.Forms.TextBox();
             this.SendButton = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.Nick = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -119,6 +118,7 @@ namespace ClientApp
             // 
             // backgroundWorker2
             // 
+            this.backgroundWorker2.WorkerSupportsCancellation = true;
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
             // Nick
@@ -154,6 +154,7 @@ namespace ClientApp
             this.Controls.Add(this.AddressLabel);
             this.Name = "Form1";
             this.Text = "Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.PortNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,7 +171,6 @@ namespace ClientApp
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.TextBox MessageTextBox;
         private System.Windows.Forms.Button SendButton;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.TextBox Nick;
         private System.Windows.Forms.Label label1;

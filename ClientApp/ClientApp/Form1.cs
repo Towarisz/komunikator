@@ -18,7 +18,7 @@ namespace ClientApp
         private TcpClient client = null;
         private BinaryReader reading = null;
         private BinaryWriter writing = null;
-        private bool activeCall = false;
+        public string end = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         public Form1()
         {
             InitializeComponent();
@@ -28,18 +28,19 @@ namespace ClientApp
         {
             try
             {
-                client = new TcpClient(AddressTextBox.Text, (int)PortNumber.Value);
+                //client = new TcpClient(AddressTextBox.Text, (int)PortNumber.Value);
+                client = new TcpClient("127.0.0.1", 1001);
                 NetworkStream ns = client.GetStream();
                 reading = new BinaryReader(ns);
                 writing = new BinaryWriter(ns);
                 writing.Write(Nick.Text);
                 writing.Flush();
-                activeCall = true;
                 backgroundWorker2.RunWorkerAsync();
+                ConnectButton.Enabled = false;
             }
-            catch(Exception ex)
+            catch
             {
-                activeCall = false;
+                
             }
   
         }
@@ -49,6 +50,7 @@ namespace ClientApp
             string messageSent = MessageTextBox.Text;
             writing.Write(messageSent);
             writing.Flush();
+            MessageTextBox.Text = "";
         }
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
@@ -71,5 +73,15 @@ namespace ClientApp
             c.Invoke(d);
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                writing.Write(end);
+                backgroundWorker2.CancelAsync();
+                client.Close();
+            }
+            catch { }
+        }
     }
 }
