@@ -36,10 +36,10 @@ namespace ServerConsoleApp
             connectionTime = whenConnect;
             reading = newStreamReader;
             writing = new BinaryWriter(client.GetStream());
-            
 
             message = new Thread(new ThreadStart(() =>
             {
+                Broadcast(nazwa + " has connected", "Server");
                 while (connected)
                 { 
                     try
@@ -47,7 +47,7 @@ namespace ServerConsoleApp
                         recivedMessge = reading.ReadString();
                         if ( recivedMessge == end)
                         {
-                            writing.Write(nazwa + "has disconnected" );
+                            Broadcast(nazwa + " has disconnected", "Server" );
                             Delete(this);
                             connected = false;
                         }
@@ -60,6 +60,7 @@ namespace ServerConsoleApp
                         Console.WriteLine(ex.ToString());
                     }
                 }
+                this.message.Abort();
             }));
             message.Start();
         }
@@ -77,7 +78,6 @@ namespace ServerConsoleApp
         {
             names.Remove(dissconnectedClient.nazwa);
             users.Remove(dissconnectedClient);
-            dissconnectedClient.message.Abort();
         }
        
 
