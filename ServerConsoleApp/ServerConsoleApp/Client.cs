@@ -85,8 +85,26 @@ namespace ServerConsoleApp
 
         public static void Pv(String Message,String sender,String reciver)
         {
-            users.Find(x => x.nazwa == reciver).writing.Write(sender+" -> "+reciver +": "+Message);
-            users.Find(x => x.nazwa == sender).writing.Write(sender+" -> "+reciver +": "+Message);
+            Client rec = users.Find(x => x.nazwa == reciver);
+            Client sen = users.Find(x => x.nazwa == sender);
+
+            if(sender == reciver)
+            {
+                sen.writing.Write("Server: you can't write private message to yourselfe");
+            }
+            else
+            {
+                if(rec != null)
+                {
+                rec.writing.Write(sender + " -> " + reciver + ": " + Message);
+                sen.writing.Write(sender + " -> " + reciver + ": " + Message);
+                }
+                else
+                {
+                sen.writing.Write("Server:"+reciver+" does not exist");
+                }
+                
+            }
         }
 
         public static string name(List<string> nikci)
