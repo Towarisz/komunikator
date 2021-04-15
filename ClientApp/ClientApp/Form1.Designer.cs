@@ -199,7 +199,6 @@ namespace ClientApp
             this.easterbutton.TabIndex = 2;
             this.easterbutton.Text = ".";
             this.easterbutton.UseVisualStyleBackColor = true;
-            this.easterbutton.Click += new System.EventHandler(this.easterbutton_Click);
             // 
             // label2
             // 
@@ -233,7 +232,6 @@ namespace ClientApp
             this.usersList.Name = "usersList";
             this.usersList.Size = new System.Drawing.Size(226, 493);
             this.usersList.TabIndex = 11;
-            this.usersList.SelectedIndexChanged += new System.EventHandler(this.usersList_SelectedIndexChanged);
             // 
             // panel4
             // 

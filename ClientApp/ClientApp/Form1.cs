@@ -131,16 +131,6 @@ namespace ClientApp
             PortLabel.ForeColor = Color.White;
         }
 
-        private void easterbutton_Click(object sender, EventArgs e)
-        {
-            //ClientListBox.BackgroundImage = ;
-        }
-
-        private void usersList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
