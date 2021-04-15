@@ -54,6 +54,7 @@ namespace ServerConsoleApp
                         {
                             Broadcast(nazwa + " has disconnected", "Server" );
                             Delete(this);
+                            Console.WriteLine(nazwa + " has disconnected");
                             Broadcast(name(names), "Serverlist");
                             connected = false;
                         }else if(privatemessage.Success)
