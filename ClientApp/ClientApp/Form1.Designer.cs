@@ -111,6 +111,7 @@ namespace ClientApp
             this.ClientListBox.BackColor = System.Drawing.Color.White;
             this.ClientListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ClientListBox.FormattingEnabled = true;
+            this.ClientListBox.HorizontalScrollbar = true;
             this.ClientListBox.ItemHeight = 24;
             this.ClientListBox.Location = new System.Drawing.Point(16, 53);
             this.ClientListBox.Name = "ClientListBox";
@@ -142,6 +143,7 @@ namespace ClientApp
             // SendButton
             // 
             this.SendButton.BackColor = System.Drawing.Color.DarkGray;
+            this.SendButton.Enabled = false;
             this.SendButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SendButton.Location = new System.Drawing.Point(365, 507);
             this.SendButton.Name = "SendButton";
@@ -160,9 +162,9 @@ namespace ClientApp
             this.Nick.BackColor = System.Drawing.Color.White;
             this.Nick.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Nick.Location = new System.Drawing.Point(10, 52);
-            this.Nick.Multiline = true;
+            this.Nick.MaxLength = 16;
             this.Nick.Name = "Nick";
-            this.Nick.Size = new System.Drawing.Size(133, 29);
+            this.Nick.Size = new System.Drawing.Size(133, 31);
             this.Nick.TabIndex = 8;
             // 
             // label1
@@ -311,10 +313,11 @@ namespace ClientApp
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Dipskort";
+            this.Text = "+";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.PortNumber)).EndInit();
             this.panel1.ResumeLayout(false);

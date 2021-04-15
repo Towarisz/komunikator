@@ -30,7 +30,7 @@ namespace ClientApp
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            Match match = Regex.Match(Nick.Text, @"(^\d)|(^server)|(\s)");
+            Match match = Regex.Match(Nick.Text, @"(^\d)|(^Server)|(\s)");
             if (match.Success)
             {
                 InvokeAs(ClientListBox, () => ClientListBox.Items.Add("Nick contain forbidden characters"));
@@ -48,6 +48,7 @@ namespace ClientApp
                     writing.Flush();
                     backgroundWorker2.RunWorkerAsync();
                     ConnectButton.Enabled = false;
+                    SendButton.Enabled = true;
                 }
                 catch
                 {
@@ -67,10 +68,23 @@ namespace ClientApp
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
             string messageReceived;
+            string[] messagesplit;
             while (true)
             {
                 messageReceived = reading.ReadString();
+                Match match = Regex.Match(messageReceived, @"^(Serverlist:)");
+                if (match.Success)
+                {
+                    InvokeAs(usersList, () => usersList.Items.Clear());
+                    messagesplit = messageReceived.Substring(12).Split(' ');
+                    foreach(string x in messagesplit){
+                        InvokeAs(usersList, () => usersList.Items.Add(x));
+                    }
+                }
+                else
+                {
                 InvokeAs(ClientListBox, () => ClientListBox.Items.Add(messageReceived));
+                }
             }
         }
 
