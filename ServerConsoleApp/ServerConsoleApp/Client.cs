@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.IO;
 using System.Net;
+using System.Text.RegularExpressions;
 
 namespace ServerConsoleApp
 {
@@ -27,6 +28,8 @@ namespace ServerConsoleApp
         public bool connected = true;
         public string recivedMessge;
         public string end = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        public Match privatemessage;
+        public string[] messagesplit;
 
 
         public Client(ref TcpClient newConnection,ref BinaryReader newStreamReader, ref String newNick, string whenConnect)
@@ -40,18 +43,24 @@ namespace ServerConsoleApp
             message = new Thread(new ThreadStart(() =>
             {
                 Broadcast(nazwa + " has connected", "Server");
+                Broadcast(name(names), "Serverlist");
                 while (connected)
                 { 
                     try
                     {
                         recivedMessge = reading.ReadString();
+                        privatemessage = Regex.Match(recivedMessge,@"^(/msg)\s");
                         if ( recivedMessge == end)
                         {
                             Broadcast(nazwa + " has disconnected", "Server" );
                             Delete(this);
+                            Broadcast(name(names), "Serverlist");
                             connected = false;
-                        }
-                        else
+                        }else if(privatemessage.Success)
+                        {
+                            messagesplit = recivedMessge.Split(' ');
+                            Pv(recivedMessge.Substring(messagesplit[1].Length + 5),nazwa,messagesplit[1]);
+                        }else
                         {
                             Broadcast(recivedMessge, nazwa);
                         }
@@ -65,13 +74,25 @@ namespace ServerConsoleApp
             message.Start();
         }
 
-            public static void Broadcast(String message, String sender)
+        public static void Broadcast(String message, String sender)
         {
             foreach(Client client in users)
             {
                 client.writing.Write(sender + ": "+ message);
                 client.writing.Flush();
             }
+        }
+
+        public static void Pv(String Message,String sender,String reciver)
+        {
+            users.Find(x => x.nazwa == reciver).writing.Write(sender+" -> "+reciver +": "+Message);
+        }
+
+        public static string name(List<string> nikci)
+        {
+            string brrr = "";
+            nikci.ForEach(x => brrr += x + " ");
+            return brrr;
         }
 
         public static void Delete(Client dissconnectedClient)
