@@ -83,7 +83,7 @@ namespace ClientApp
                 }
                 else
                 {
-                InvokeAs(ClientListBox, () => ClientListBox.Items.Add(messageReceived));
+                    InvokeAs(ClientListBox, () => ClientListBox.Items.Add(messageReceived));
                 }
             }
         }

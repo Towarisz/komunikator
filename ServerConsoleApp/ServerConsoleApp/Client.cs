@@ -86,6 +86,7 @@ namespace ServerConsoleApp
         public static void Pv(String Message,String sender,String reciver)
         {
             users.Find(x => x.nazwa == reciver).writing.Write(sender+" -> "+reciver +": "+Message);
+            users.Find(x => x.nazwa == sender).writing.Write(sender+" -> "+reciver +": "+Message);
         }
 
         public static string name(List<string> nikci)
