@@ -19,6 +19,7 @@ namespace ClientApp
         private TcpClient client = null;
         private BinaryReader reading = null;
         private BinaryWriter writing = null;
+        public bool activeCall = false;
 
         public string end = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
@@ -31,7 +32,7 @@ namespace ClientApp
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             Match match = Regex.Match(Nick.Text, @"(^\d)|(^Server)|(\s)");
-            if (match.Success)
+            if (match.Success || Nick.Text == "")
             {
                 InvokeAs(ClientListBox, () => ClientListBox.Items.Add("Nick contain forbidden characters"));
             }
@@ -49,6 +50,10 @@ namespace ClientApp
                     backgroundWorker2.RunWorkerAsync();
                     ConnectButton.Enabled = false;
                     SendButton.Enabled = true;
+                    activeCall = true;
+                    Nick.Enabled = false;
+                    AddressTextBox.Enabled = false;
+                    PortNumber.Enabled = false;
                 }
                 catch
                 {
@@ -71,19 +76,27 @@ namespace ClientApp
             string[] messagesplit;
             while (true)
             {
-                messageReceived = reading.ReadString();
-                Match match = Regex.Match(messageReceived, @"^(Serverlist:)");
-                if (match.Success)
+                try
                 {
-                    InvokeAs(usersList, () => usersList.Items.Clear());
-                    messagesplit = messageReceived.Substring(12).Split(' ');
-                    foreach(string x in messagesplit){
-                        InvokeAs(usersList, () => usersList.Items.Add(x));
+                    messageReceived = reading.ReadString();
+                    Match match = Regex.Match(messageReceived, @"^(Serverlist:)");
+                    if (match.Success)
+                    {
+                        InvokeAs(usersList, () => usersList.Items.Clear());
+                        messagesplit = messageReceived.Substring(12).Split(' ');
+                        foreach(string x in messagesplit){
+                            InvokeAs(usersList, () => usersList.Items.Add(x));
+                        }
+                    }else
+                    {
+                        InvokeAs(ClientListBox, () => ClientListBox.Items.Add(messageReceived));
                     }
                 }
-                else
+                catch 
                 {
-                    InvokeAs(ClientListBox, () => ClientListBox.Items.Add(messageReceived));
+                    activeCall = false;
+                    MessageBox.Show("Lost connection with server", "Lost connection");
+                    InvokeAs(this, () => this.Close());
                 }
             }
         }
@@ -133,13 +146,11 @@ namespace ClientApp
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
+            if (activeCall)
             {
                 writing.Write(end);
-                backgroundWorker2.CancelAsync();
                 client.Close();
             }
-            catch { }
         }
 
         

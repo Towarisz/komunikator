@@ -67,7 +67,7 @@ namespace ServerConsoleApp
                         }
                     }catch(Exception ex)
                     {
-                        Console.WriteLine(ex.ToString());
+                        
                     }
                 }
                 this.message.Abort();
@@ -79,8 +79,12 @@ namespace ServerConsoleApp
         {
             foreach(Client client in users)
             {
-                client.writing.Write(sender + ": "+ message);
-                client.writing.Flush();
+                try
+                {
+                    client.writing.Write(sender + ": " + message);
+                    client.writing.Flush();
+                }
+                catch { }
             }
         }
 
